@@ -1,0 +1,115 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: 5px;
+}
+
+main {
+  flex: 1;
+  min-height: 50px;
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+button {
+  background-color: transparent;
+  color: var(--muted-foreground);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 20px;
+  width: 50%;
+  height: 40px;
+  display: inline-flex;
+  place-items: center;
+  justify-content: center;
+}
+
+textarea {
+  background-color: var(--input);
+  width: 100%;
+  resize: vertical;
+  min-height: 250px;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+p {
+  color: var(--muted-foreground);
+}
+
+label div {
+  border: 2px dashed var(--secondary);
+  border-radius: 5px;
+  padding: 50px 20px;
+}
+
+.file-type-button:hover{
+  color: var(--foreground)
+}
+
+.file-type-button.selected {
+  color: var(--foreground);
+  background-color: var(--primary);
+}
+
+.upload-button {
+  padding: 10px 10px;
+}
+
+.classify-button {
+  color: var(--foreground);
+  background-color: var(--primary);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.content-div {
+  background-color: #3a3847;
+  text-align: left
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+#file-button {
+  border-top-left-radius: 4px;
+}
+
+#input-type-div {
+  background-color: oklch(0.269 0 0);
+  border-radius: 5px;
+  width: 100wh;
+  margin: 20px auto;
+  padding: 4px;
+}
+
+#classify-div {
+  background-color: #3e4145;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#classify-div:hover {
+  background-color: #566168;
+}
