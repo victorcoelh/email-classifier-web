@@ -1,31 +1,49 @@
-import './App.css'
-import ClassifyButton from './ClassifyButton'
-import InputType from './InputType'
-import UserContent from './UserContent'
+import "./App.css";
+import ClassifyButton from "../components/ClassifyButton";
+import InputType from "../components/InputType";
+import UserContent from "../components/UserContent";
+import ResultPage from "../views/ResultPage";
+import { useAppStore } from "@/state/store";
 
 export default function App() {
-  return <>
-    <Main />
-    <Footer />
-  </>
+  return (
+    <>
+      <main>
+        <PageSelector />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
-function Main() {
+function PageSelector() {
+  const appStatus = useAppStore((state) => state.appStatus);
+
+  if (appStatus === "complete") {
+    return <ResultPage />;
+  } else {
+    return <DefaultPage />;
+  }
+}
+
+function DefaultPage() {
   return (
-    <main>
+    <>
       <h1>E-mail Classification Service</h1>
       <p>Upload a file(s) containing the e-mail(s), or copy the text below</p>
       <InputType />
       <UserContent />
       <ClassifyButton />
-    </main>
-  )
+    </>
+  );
 }
 
 function Footer() {
   return (
     <footer>
-      <p>2025 - Created with care by <a href="https://github.com/victorcoelh">Victor Coelho</a> :)</p>
+      <p>
+        2025 - Created with care by <a href="https://github.com/victorcoelh">Victor Coelho</a> :)
+      </p>
     </footer>
-  )
+  );
 }

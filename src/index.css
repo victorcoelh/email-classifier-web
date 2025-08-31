@@ -18,6 +18,7 @@
   --primary: oklch(0.488 0.243 264.376);
   --secondary: oklch(0.269 0 0);
   --input: oklch(0.205 0 0);
+  --alert: #fa3e3e;
 }
 
 @media (prefers-color-scheme: light) {

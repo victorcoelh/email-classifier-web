@@ -1,20 +1,18 @@
-import axios from 'axios';
+import type { AxiosResponse } from "axios";
+import type { EmailResult } from "@/state/store";
+import axios from "axios";
 
-type Payload = FormData | { text: string }
+axios.defaults.baseURL = "http://localhost:8001";
 
-export function classifyFile(content: File) {
-  let form_data = new FormData();
-  form_data.append('email', content);
+type ServerResponse = Promise<AxiosResponse<Array<EmailResult>>>
 
-  sendRequestToPythonBackend('email/classify-file', form_data)
+export function classifyFiles(content: Array<File>): ServerResponse {
+  const form_data = new FormData();
+  content.forEach(file => form_data.append("emails", file))
+
+  return axios.post("email/classify-files", form_data);
 }
 
-export function classifyText(content: string) {
-  sendRequestToPythonBackend('email/classify', { text: content })
-}
-
-function sendRequestToPythonBackend(endpoint: string, payload: Payload) {
-  axios.post(`http://localhost:8001/${endpoint}`, payload)
-    .then(response => console.log(response.data))
-    .catch(error => console.error(error))
+export function classifyText(content: string): ServerResponse {
+  return axios.post("email/classify", { email: content });
 }
