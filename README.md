@@ -7,6 +7,7 @@ The frontend connects to a Python backend integrated with the OpenAI API, for th
 step.
 
 ### Features
+
 - Classifies e-mails as productive or unproductive
 - Provides a confidence level for each classification
 - Also provides a suggested answer for a given e-mail
