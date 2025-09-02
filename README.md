@@ -56,3 +56,5 @@ The app will be available at http://localhost:5173 by default.
 If you built the project using ```pnpm run build```, you can preview it locally using:
 
 ```pnpm run preview```
+
+And the app will instead be available at http://localhost:4173.
