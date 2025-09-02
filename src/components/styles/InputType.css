@@ -2,19 +2,9 @@
   color: var(--foreground);
 }
 
-.file-type-button.selected {
-  color: var(--foreground);
-  background-color: var(--primary);
-}
-
 #input-type-div {
   background-color: oklch(0.269 0 0);
-  border-radius: 5px;
   width: 100wh;
   margin: 20px auto;
   padding: 4px;
-}
-
-#file-button {
-  border-top-left-radius: 4px;
 }

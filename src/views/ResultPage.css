@@ -1,7 +1,6 @@
 progress {
   width: 100%;
   height: 10px;
-  border-radius: 10px;
   border: none;
   appearance: none;
   background-color: var(--secondary);
@@ -27,14 +26,8 @@ progress::-moz-progress-bar {
 
 .answer-div {
   background-color: var(--input);
-  border: 2px solid var(--secondary);
   padding: 15px;
-  border-radius: 5px;
   margin-top: 10px;
-}
-
-.answer-div p {
-  color: var(--foreground);
 }
 
 #confidence-level {

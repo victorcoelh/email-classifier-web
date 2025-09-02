@@ -25,7 +25,7 @@ function FileList({ highlightCurrent }: { highlightCurrent: boolean }) {
     return (
       <li
         key={index}
-        className={currentFile === index && highlightCurrent ? "selected-file" : ""}
+        className={currentFile === index && highlightCurrent ? "bg-primary" : "bg-input"}
         onClick={() => setFile(index)}
       >
         <File className="icon" size={16} />

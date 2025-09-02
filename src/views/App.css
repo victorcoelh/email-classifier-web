@@ -24,16 +24,13 @@ main {
   flex: 1;
   min-height: 50px;
   background-color: transparent;
-  border: 2px solid var(--secondary);
-  border-radius: 10px;
   padding: 25px;
+
 }
 
 button {
   background-color: transparent;
-  color: var(--muted-foreground);
   border: none;
-  border-radius: 5px;
   font-size: 16px;
   padding: 5px 20px;
   width: 50%;
@@ -43,12 +40,11 @@ button {
   justify-content: center;
 }
 
-p {
-  color: var(--muted-foreground);
-}
+p { color: var(--muted-foreground); }
 
 .rounded { border-radius: 5px; }
 .rounded-large { border-radius: 10px; }
+.default-border { border: 2px solid var(--secondary) }
 
 .flex-center {
   display: inline-flex;
@@ -61,6 +57,7 @@ p {
 .left-content { text-align: left; }
 
 .color-muted { color: var(--muted-foreground); }
+.color-foreground { color: var(--foreground); }
 .color-primary { color: var(--primary); }
 .color-alert { color: var(--alert); }
 

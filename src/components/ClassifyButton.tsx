@@ -2,6 +2,7 @@ import { useAppStore } from "@/state/store";
 import { classifyFiles, classifyText } from "@/gateways/classifier";
 import { Send } from "lucide-react";
 import "./styles/ClassifyButton.css";
+import toast from "react-hot-toast";
 
 export default function ClassifyButton() {
   const appStatus = useAppStore((state) => state.appStatus);
@@ -15,7 +16,7 @@ export default function ClassifyButton() {
 
 function LoadingButton() {
   return (
-    <button className="classify-button" disabled>
+    <button className="classify-button color-foreground" disabled>
       <div className="loader icon"></div>
       Processing...
     </button>
@@ -41,8 +42,19 @@ function IdleButton() {
         setStatus("complete");
       })
       .catch((error) => {
-        console.log(error);
-        setStatus("failed");
+        const errorMessage = error?.message || "Something went wrong";
+
+        toast.error(errorMessage, {
+          position: "bottom-center",
+          duration: 4000,
+          style: {
+            borderRadius: '10px',
+            background: '#333',
+            color: '#fff',
+          },
+        });
+
+        setStatus("idle");
       });
   };
 

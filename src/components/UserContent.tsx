@@ -37,7 +37,7 @@ function FileContent() {
     <>
       <input id="file-upload" hidden={true} type="file" onChange={onFileChange} multiple></input>
       <label htmlFor="file-upload">
-        <div>
+        <div className="rounded">
           <Upload className="icon" size={64} />
           <h3>{file_count}</h3>
           <p>{size_text}</p>
@@ -59,6 +59,7 @@ function TextContent() {
   return (
     <textarea
       name="email"
+      className="rounded default-border bg-input"
       onChange={onTextChange}
       value={userText}
       placeholder="Enter your text here..."

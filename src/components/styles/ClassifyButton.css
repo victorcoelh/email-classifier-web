@@ -1,8 +1,8 @@
 .classify-button {
-  color: var(--foreground);
-  background-color: var(--primary);
   width: 100%;
   margin-top: 20px;
+  background-color: var(--primary);
+  border-radius: 5px;
 }
 
 .loader {

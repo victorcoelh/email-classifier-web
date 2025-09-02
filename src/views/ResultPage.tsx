@@ -59,8 +59,8 @@ function SuggestedAnswer({ answer }: { answer: string }) {
   return (
     <>
       <h3>Suggested Answer</h3>
-      <div className="answer-div">
-        <p>{answer}</p>
+      <div className="answer-div rounded default-border">
+        <p className="color-foreground">{answer}</p>
       </div>
     </>
   );

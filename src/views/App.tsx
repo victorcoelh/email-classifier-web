@@ -4,11 +4,13 @@ import InputType from "../components/InputType";
 import UserContent from "../components/UserContent";
 import ResultPage from "../views/ResultPage";
 import { useAppStore } from "@/state/store";
+import { Toaster } from "react-hot-toast";
 
 export default function App() {
   return (
     <>
-      <main>
+      <Toaster />
+      <main className="default-border rounded-large">
         <PageSelector />
       </main>
       <Footer />

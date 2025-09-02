@@ -24,7 +24,3 @@ li p {
   float: right;
   margin-left: auto;
 }
-
-.selected-file {
-  background-color: var(--primary);
-}

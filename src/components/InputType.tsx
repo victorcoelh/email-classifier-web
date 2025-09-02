@@ -7,9 +7,12 @@ export default function InputType() {
   const selectButton = useAppStore((state) => state.selectButton);
 
   return (
-    <div id="input-type-div">
+    <div className="rounded" id="input-type-div">
       <button
-        className={selected === "file" ? "file-type-button selected" : "file-type-button"}
+        className={selected === "file"
+          ? "bg-primary rounded"
+          : "color-muted rounded"
+        }
         id="file-button"
         onClick={() => selectButton("file")}
       >
@@ -18,7 +21,10 @@ export default function InputType() {
       </button>
 
       <button
-        className={selected === "text" ? "file-type-button selected" : "file-type-button"}
+        className={selected === "text"
+          ? "bg-primary rounded"
+          : "color-muted rounded"
+        }
         id="text-button"
         onClick={() => selectButton("text")}
       >
