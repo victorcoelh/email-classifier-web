@@ -35,7 +35,14 @@ function FileContent() {
 
   return (
     <>
-      <input id="file-upload" hidden={true} type="file" onChange={onFileChange} multiple></input>
+      <input
+        id="file-upload"
+        hidden={true}
+        type="file"
+        accept=".txt,.pdf"
+        onChange={onFileChange}
+        multiple
+      ></input>
       <label htmlFor="file-upload">
         <div className="rounded">
           <Upload className="icon" size={64} />
